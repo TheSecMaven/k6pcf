@@ -1,0 +1,11 @@
+---
+  applications:
+    - name: k6poc2
+      memory: 512M
+      routes:
+        - route: k6poc2.service.com
+      instances: 1
+      buildpack: python_buildpack
+      stack: cflinuxfs3
+      env:
+        ENVIRONMENT: dev
